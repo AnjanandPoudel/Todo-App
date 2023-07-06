@@ -9,6 +9,10 @@ const TodoSchema = new mongoose.Schema(
     status:{
         type:String,
         enum:["completed", "failed", "ongoing"]
+    },
+    createdDay:{
+        type:String,
+        default:new Date().toISOString().split('T')[0]
     }
   },
   {

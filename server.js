@@ -35,6 +35,10 @@ app.use('*',(req,res,next) => {
 })
 
 //routes will be here
+app.get("/",(req,res)=>{
+  res.json({success:true,message:"Welcome To Todo App"})
+})
+
 app.use("/api",ApiRouter)
 
 //handle other requests with 404 if not handled previously

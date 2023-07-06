@@ -30,6 +30,9 @@ exports.failCase = ({ req, res }) => {
 
 exports.successCase = ({ req, res }) => {
   return (data, message="OK" ) => {
+    if(typeof data === "string"){
+      return res.json({message: data})
+    }
     return res.json({ data, message});
   };
 };
