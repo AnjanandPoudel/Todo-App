@@ -14,8 +14,8 @@ exports.validator = (req, res, next) => {
         " :" +
         validationResultIs.array({ onlyFirstError: true })[0].msg;
       throw new SetErrorResponse(
-         finalError,
-         400,
+        400,
+         finalError
       );
     }
     next();

@@ -1,5 +1,5 @@
 class SetErrorResponse extends Error {
-    constructor(value="Not Found",status=404) {
+    constructor(status=404,value="Not Found") {
       super(value);
       this._meta_ = {
         error: value,
